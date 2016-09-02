@@ -1,0 +1,146 @@
+# sources:
+#   - "https://supermarket.getchef.com"
+# cookbooks:
+#   cookbook-name:
+#     versions:
+#       - "~> 4.0.2"
+#       - "> 5.0.0"
+#     git:
+#       location: url | path
+#       branches:
+#         - a_branch_name
+#       refs:
+#         - SHA
+sources:
+  - "https://api.berkshelf.com"
+#  - "https://supermarket.chef.io"
+cookbooks:
+  postgresql:
+    versions:
+      - "4.0.6"
+  apt:
+    versions:
+      - "~> 2.9.2"
+  aws:
+    versions:
+      - "3.4.0"
+  ntp:
+    versions:
+      - "2.0.0"
+  users:
+    versions:
+      - "3.0.0"
+  sudo:
+    versions:
+      - "2.10.0"
+  yum-epel:
+    versions:
+      - "> 0.7.0"
+  git:
+    versions:
+      - "4.6.0"
+  solr:
+    versions:
+      - "0.5.0"
+  golang:
+    versions:
+      - "1.7.0"
+  apache2:
+    versions:
+      - "> 3.0.0"
+  build-essential:
+    versions:
+      - "~> 2.4.0"
+  mysql:
+    versions:
+      - "~> 6.1.3"
+  mysql-chef_gem:
+    versions:
+      - "1.0.0"
+  database:
+    versions:
+      - "5.1.2"
+  mysql2_chef_gem:
+    versions:
+      - "1.0.2"
+  openssl:
+    versions:
+      - "> 4.4.0"
+  selinux:
+    versions:
+      - "0.9.0"
+  yum:
+    versions:
+      - "3.12.0"
+  hostsfile:
+    versions:
+      - "2.4.5"
+  system:
+    versions:
+      - "0.11.0"
+  ssh_known_hosts:
+    versions:
+      - "2.1.0"
+  supervisor:
+    versions:
+      - "0.4.12"
+  iptables:
+    versions:
+      - "2.1.1"
+  phing:
+    versions:
+      - "0.0.3"
+  newrelic_plugins:
+    versions:
+      - "1.1.0"
+  phpunit:
+    versions:
+      - "1.0.2"
+  cpanminus:
+    versions:
+      - "0.1.1"
+  logrotate:
+    versions:
+      - "2.1.0"
+  blackfire:
+    versions:
+      - "2.0.1"
+  haproxy:
+    versions:
+      - "1.6.7"
+#  tarball:
+#    versions:
+#      - "0.0.1"
+#    location:
+#      - "https://github.com/ooyala/tarball-chef-cookbook.git"
+#    branches:
+#      - "master"
+#    refs:
+#      - "f83bed678bbde4997958d5de1093c65105a13118"
+#     git:
+#       location: url | path
+#       branches:
+#         - a_branch_name
+#       refs:
+#         - SHA
+  magento:
+    versions:
+      - "0.8.6"
+  route53:
+    versions:
+      - "0.4.4"
+  denyhosts:
+    versions:
+      - "1.0.0"
+  chef-solo-search:
+    versions:
+      - "0.5.1"
+  redisio:
+    versions:
+      - "2.4.2"
+  ulimit:
+    versions:
+      - "0.4.0"
+  postfix:
+    versions:
+      - "3.8.0"
