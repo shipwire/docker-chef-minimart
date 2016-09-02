@@ -1,6 +1,18 @@
 FROM nginx
 
-# Install Ruby
+RUN apt-get update && apt-get upgrade -y libapt-pkg4.12
+RUN apt-get install -y wget \
+  build-essential \
+  openssl \
+  libreadline6 \
+  libreadline6-dev \
+  zlib1g \
+  zlib1g-dev \
+  libssl-dev \
+  ncurses-dev \
+  libyaml-dev \
+  ruby-dev \
+  gcc
 
 RUN gem install minimart
 
