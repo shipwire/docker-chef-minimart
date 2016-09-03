@@ -1,13 +1,13 @@
 FROM ruby 
 
-RUN gem install minimart
+RUN gem install minimart 
 
 COPY inventory.yml .
 
-RUN   minimart mirror --load-deps \
-      && minimart web --host=http://localhost:8081
-
 ENV NGINX_VERSION 1.10.1-1~jessie
+
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - \
+        && apt-get install -y nodejs
 
 RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 \
 	&& echo "deb http://nginx.org/packages/debian/ jessie nginx" >> /etc/apt/sources.list \
@@ -28,6 +28,9 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 	&& ln -sf /dev/stderr /var/log/nginx/error.log
 
 COPY   nginx.conf /etc/nginx/nginx.conf
+
+RUN   minimart mirror --load-deps \
+      && minimart web --host=http://localhost:8081
 
 EXPOSE 8081
 
