@@ -32,5 +32,9 @@ COPY   nginx.conf /etc/nginx/nginx.conf
 RUN   minimart mirror --load-deps \
       && minimart web --host=http://localhost:8081
 
+RUN rm -rf /usr/share/nginx/html
+
+RUN cd /usr/share/nginx && ln -s /web html
+
 EXPOSE 8081
 
