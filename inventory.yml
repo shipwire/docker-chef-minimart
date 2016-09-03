@@ -3,7 +3,7 @@
 # cookbooks:
 #   cookbook-name:
 #     versions:
-#       - "~> 4.0.2"
+#       - "> 4.0.2"
 #       - "> 5.0.0"
 #     git:
 #       location: url | path
@@ -20,7 +20,7 @@ cookbooks:
       - "4.0.6"
   apt:
     versions:
-      - "~> 2.9.2"
+      - "> 2.9.2"
   aws:
     versions:
       - "3.4.0"
@@ -50,10 +50,10 @@ cookbooks:
       - "> 3.0.0"
   build-essential:
     versions:
-      - "~> 2.4.0"
+      - "> 2.4.0"
   mysql:
     versions:
-      - "~> 6.1.3"
+      - "> 6.1.3"
   mysql-chef_gem:
     versions:
       - "1.0.0"
