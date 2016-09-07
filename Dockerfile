@@ -30,7 +30,7 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 COPY   nginx.conf /etc/nginx/nginx.conf
 
 RUN   minimart mirror --load-deps \
-      && minimart web --host=http://localhost:8081
+      && minimart web --host=http://devops1.aws.shipwire.com:8081
 
 RUN rm -rf /usr/share/nginx/html
 
