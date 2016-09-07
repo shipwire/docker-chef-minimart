@@ -33,7 +33,7 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 COPY   nginx.conf /etc/nginx/nginx.conf
 
 RUN   minimart mirror --load-deps \
-      && minimart web --host=http://"$MINIMART_URL":"MINIMART_PORT"
+      && minimart web --host=http://${MINIMART_URL}:${MINIMART_PORT}
 
 RUN rm -rf /usr/share/nginx/html
 
