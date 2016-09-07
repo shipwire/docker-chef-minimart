@@ -1,7 +1,7 @@
 FROM ruby 
 
-ENV MINIMART_URL=localhost
-ENV MINIMART_PORT=8081
+ENV MINIMART_URL localhost
+ENV MINIMART_PORT 8081
 
 RUN gem install minimart 
 
