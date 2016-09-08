@@ -4,7 +4,7 @@ RUN gem install minimart
 
 COPY inventory.yml .
 
-ENV MINIMART_URL=localhos
+ENV MINIMART_URL=localhost
 ENV MINIMART_PORT=8081
 
 ENV NGINX_VERSION 1.10.1-1~jessie
