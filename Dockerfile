@@ -4,8 +4,8 @@ RUN gem install minimart
 
 ARG MINIMART_URL=localhost
 ARG MINIMART_PORT=8081
-ENV MINIMART_URL
-ENV MINIMART_PORT
+ENV MINIMART_URL=localhost
+ENV MINIMART_PORT=8081
 
 COPY inventory.yml .
 
@@ -42,4 +42,3 @@ RUN rm -rf /usr/share/nginx/html
 RUN cd /usr/share/nginx && ln -s /web html
 
 EXPOSE 8081
-
