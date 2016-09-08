@@ -1,8 +1,11 @@
+
+
+# Docker example 
 docker build .
 - obtain docker image id
 docker run -d -P -p 8081 docker_image_id /usr/sbin/nginx
 docker ps -l
 - see what port 8081 got mapped to
-open browser to http://localhost:mapped_port
+open browser to http://fqnd:mapped_port
 
--v http://fqdn:8081
+You will have to bring in your own inventory file.
