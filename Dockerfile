@@ -35,4 +35,6 @@ RUN rm -rf /usr/share/nginx/html
 
 RUN cd /usr/share/nginx && ln -s /web html
 
+CMD [/usr/sbin/nginx] 
+
 EXPOSE 8081
