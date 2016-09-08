@@ -2,11 +2,6 @@ FROM ruby
 
 RUN gem install minimart 
 
-ARG MINIMART_URL=localhost
-ARG MINIMART_PORT=8081
-ENV MINIMART_URL=localhost
-ENV MINIMART_PORT=8081
-
 COPY inventory.yml .
 
 ENV NGINX_VERSION 1.10.1-1~jessie
@@ -34,8 +29,7 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 
 COPY   nginx.conf /etc/nginx/nginx.conf
 
-RUN   minimart mirror --load-deps \
-      && minimart web --host=http://${MINIMART_URL}:${MINIMART_PORT}
+RUN   minimart mirror --load-deps
 
 RUN rm -rf /usr/share/nginx/html
 
