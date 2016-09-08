@@ -4,6 +4,8 @@ RUN gem install minimart
 
 ARG MINIMART_URL=localhost
 ARG MINIMART_PORT=8081
+ENV MINIMART_URL
+ENV MINIMART_PORT
 
 COPY inventory.yml .
 
