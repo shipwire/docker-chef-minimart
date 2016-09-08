@@ -4,6 +4,9 @@ RUN gem install minimart
 
 COPY inventory.yml .
 
+ENV MINIMART_URL=localhos
+ENV MINIMART_PORT=8081
+
 ENV NGINX_VERSION 1.10.1-1~jessie
 
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - \
@@ -29,12 +32,12 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 
 COPY   nginx.conf /etc/nginx/nginx.conf
 
-RUN   minimart mirror --load-deps
+RUN minimart mirror --load-deps
+
+RUN minimart web --host=http://$MINIMART_URL:$MINIMART_PORT
 
 RUN rm -rf /usr/share/nginx/html
 
 RUN cd /usr/share/nginx && ln -s /web html
-
-CMD [/usr/sbin/nginx] 
 
 EXPOSE 8081
