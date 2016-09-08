@@ -1,11 +1,14 @@
+This container installs default localhost port 8081 Minimart and configures it based on our own inventory file.
 
+If you want to use your own inventory and URL create a custom image based on this one or use it as an example.
+This is a good solution for cases when api.bercksehlf is not accessable. 
 
 # Docker example 
-docker build .
-- obtain docker image id
-docker run -d -P -p 8081 docker_image_id /usr/sbin/nginx
+
+docker pull nickmaiorsky/docker-chef-minimart
+
+docker run -d -P -p 8081:8081 nickmaiorsky/docker-chef-minimart /usr/sbin/nginx
 docker ps -l
 - see what port 8081 got mapped to
-open browser to http://fqnd:mapped_port
+open browser to http://localhost:8081_port
 
-You will have to bring in your own inventory file.
